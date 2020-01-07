@@ -38,7 +38,7 @@ setup(
     install_requires=[
         'sorl-thumbnail',
         'Jinja2',
-        'django>=1.11,<1.12',
+        'django>=1.11',
         'django-jinja>=2.2',
     ],
     extras_require={
