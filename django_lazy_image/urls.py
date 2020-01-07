@@ -1,9 +1,9 @@
-from django.conf.urls import url
+from django.urls import re_path
 
 from .views import ImageView, OSMImageRefFieldImageView
 
 urlpatterns = [
-    url(
+    re_path(
         r'thumbnail/'
         r'(?P<name>[a-zA-Z0-9-_.]+)/'
         r'(?P<model>\w+\.\w+)/'
@@ -17,7 +17,7 @@ urlpatterns = [
         ImageView.as_view(),
         name='thumbnail'
     ),
-    url(
+    re_path(
         r'thumbnail/'
         r'(?P<pk>\d+)/'
         r'(?P<width>\d+|auto)/'
