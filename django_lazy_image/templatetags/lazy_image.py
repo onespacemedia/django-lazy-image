@@ -12,7 +12,7 @@ def osm_lazy_image(
         image, height=None, width=None, blur=True, max_width=1920, crop=None, show_small_image=True,
         quality=settings.LAZY_IMAGE_DEFAULT_QUALITY, webp=settings.LAZY_IMAGE_ENABLE_WEBP,
         responsive_sizes=None):
-    reverse_url = '{}:thumbnail_osm'.format(settings.LAZY_IMAGE_URL_NAMESPACE)
+    reverse_url = '{}:osm_thumbnail'.format(settings.LAZY_IMAGE_URL_NAMESPACE)
     user_sized = height and width
 
     if isinstance(quality, int):
